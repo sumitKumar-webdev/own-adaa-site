@@ -28,7 +28,7 @@ const detailStudies = [
     title: "Spiral stitch",
     caption:
       "Linear stitch work gives the front panel a quiet, dimensional rhythm.",
-    src: "/instagram/signature-details/spiral-stitch.jpeg",
+    src: "/instagram/signature-details/spiral-stitch.avif",
     alt: "Close-up of the spiral stitch detailing across the kurta front.",
     positionClass: "left-[52%] top-[37%]",
     wireClass:
@@ -44,7 +44,7 @@ const detailStudies = [
     title: "Sleeve cuff panel",
     caption:
       "The cuff print frames the volume and keeps the sleeve finish tailored.",
-    src: "/instagram/signature-details/sleeve-cuff-panel.jpeg",
+    src: "/instagram/signature-details/sleeve-cuff-panel.avif",
     alt: "Close-up of the kurta sleeve cuff panel.",
     positionClass: "left-[37%] top-[40%]",
     wireClass:
@@ -60,7 +60,7 @@ const detailStudies = [
     title: "Printed border panel",
     caption:
       "A denser border story anchors the hem and sharpens the silhouette break.",
-    src: "/instagram/signature-details/printed-border-panel.jpeg",
+    src: "/instagram/signature-details/printed-border-panel.avif",
     alt: "Close-up of the printed border panel at the kurta hem.",
     positionClass: "left-[53%] top-[59%]",
     wireClass:
@@ -76,7 +76,7 @@ const detailStudies = [
     title: "Scalloped trouser hem",
     caption:
       "The trouser hem lands with a neat scallop that finishes the set cleanly.",
-    src: "/instagram/signature-details/scalloped-trouser-hem.jpeg",
+    src: "/instagram/signature-details/scalloped-trouser-hem.avif",
     alt: "Close-up of the scalloped trouser hem.",
     positionClass: "left-[40%] top-[83%]",
     wireClass:
@@ -103,7 +103,7 @@ export function SignatureSection() {
         >
           <div className="relative mx-auto max-w-130 overflow-visible max-sm:max-w-none max-sm:overflow-hidden">
             <EditorialImage
-              src="/instagram/signature-details/interactive-detail-study.png"
+              src="/instagram/signature-details/interactive-detail-study.avif"
               alt="Own Adaa model in a sage kurta and dark trousers standing inside an editorial archway."
               sizes="(max-width: 1080px) 100vw, 45vw"
               hoverVariant="zoom"

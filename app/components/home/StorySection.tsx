@@ -32,7 +32,7 @@ export function StorySection() {
 
           <div className="relative rounded-[34px] bg-[linear-gradient(180deg,rgba(255,252,245,0.88),rgba(245,237,221,0.72))] p-2 shadow-[0_20px_42px_rgba(17,17,17,0.06)] max-sm:rounded-[26px] max-sm:p-3">
             <EditorialImage
-              src="/instagram/story-brand-red.jpeg"
+              src="/instagram/story-brand-red.avif"
               alt="Own Adaa model in a red look framed through a torn paper composition."
               sizes="(max-width: 1120px) 100vw, 36vw"
               hoverVariant="none"

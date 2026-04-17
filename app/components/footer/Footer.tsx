@@ -14,7 +14,7 @@ export function Footer() {
         <RevealItem delay={0.06} x={-24} y={12} className="max-w-[28rem]">
           <Link href="/#top" className="inline-flex items-center gap-3">
             <Image
-              src="/brand-mark.png"
+              src="/brand-mark.avif"
               alt={siteConfig.brand.logoAlt}
               width={46}
               height={46}

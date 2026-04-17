@@ -148,7 +148,7 @@ export function HeroSection() {
           {...revealImage(0.18)}
         >
           <EditorialImage
-            src="/instagram/hero-look-1.jpeg"
+            src="/instagram/hero-look-1.avif"
             alt="Two models wearing Own Adaa looks in a soft editorial setup."
             sizes="(max-width: 980px) 100vw, 39rem"
             priority
@@ -163,7 +163,7 @@ export function HeroSection() {
           {...revealSideImage(0.44)}
         >
           <EditorialImage
-            src="/instagram/hero-look-3.jpeg"
+            src="/instagram/hero-look-3.avif"
             alt="Own Adaa teal printed tunic look."
             sizes="(max-width: 980px) 80vw, 18rem"
             hoverVariant="editorial"
@@ -178,7 +178,7 @@ export function HeroSection() {
         >
           <div className="relative aspect-[0.82] overflow-hidden rounded-2xl">
             <Image
-              src="/instagram/hero-look-2.jpeg"
+              src="/instagram/hero-look-2.avif"
               alt="Own Adaa white dress editorial portrait."
               fill
               sizes="220px"

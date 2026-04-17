@@ -27,7 +27,7 @@ export function PressSection() {
           <div className="grid grid-cols-[minmax(0,0.44fr)_minmax(0,0.56fr)] items-center gap-4 max-[1120px]:grid-cols-1">
             <RevealItem delay={0.14} y={24} scaleFrom={0.985}>
               <EditorialImage
-                src="/instagram/629828913_17875753473500312_2805026210741004260_n.jpeg"
+                src="/instagram/629828913_17875753473500312_2805026210741004260_n.avif"
                 alt="Vogue India feature showing Own Adaa's Noir et Blanc jumpsuit."
                 sizes="(max-width: 980px) 100vw, 24vw"
                 hoverVariant="none"
@@ -38,7 +38,7 @@ export function PressSection() {
 
             <RevealItem delay={0.2} x={34} y={8} scaleFrom={0.99}>
               <EditorialImage
-                src="/proof/vogue-proof.jpeg"
+                src="/proof/vogue-proof.avif"
                 alt="Screenshot of the Vogue India post featuring Own Adaa."
                 sizes="(max-width: 980px) 100vw, 30vw"
                 hoverVariant="none"

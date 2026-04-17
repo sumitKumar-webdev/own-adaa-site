@@ -57,7 +57,7 @@ export function ProcessSection() {
             <div className="absolute left-[1%] top-0 w-[54%] rotate-[-3deg] rounded-[1.35rem] bg-[#f8f0df] p-3 shadow-[0_18px_32px_rgba(0,0,0,0.28)] max-md:p-2">
               <div className="relative aspect-[0.74] overflow-hidden rounded-[0.9rem] max-md:rounded-[0.72rem]">
                 <Image
-                  src="/instagram/process-board-1.jpeg"
+                  src="/instagram/process-board-1.avif"
                   alt="Process board showing print planning and digital flat references."
                   fill
                   sizes="(max-width: 1120px) 42vw, 24vw"
@@ -70,7 +70,7 @@ export function ProcessSection() {
             <div className="absolute right-[1%] top-[4%] w-[40%] rotate-[4deg] rounded-[1.2rem] bg-[#fbf5e8] p-3 shadow-[0_18px_32px_rgba(0,0,0,0.28)] max-md:p-2">
               <div className="relative aspect-[0.74] overflow-hidden rounded-[0.8rem] max-md:rounded-[0.7rem]">
                 <Image
-                  src="/instagram/process-board-2.jpeg"
+                  src="/instagram/process-board-2.avif"
                   alt="Chitra design note board with fit and fabric annotations."
                   fill
                   sizes="(max-width: 1120px) 32vw, 18vw"
@@ -83,7 +83,7 @@ export function ProcessSection() {
             <div className="absolute left-[15%] top-[43%] w-[36%] rotate-[1deg] rounded-[1.15rem] bg-[#f7f0df] p-3 shadow-[0_18px_32px_rgba(0,0,0,0.28)] max-md:p-2">
               <div className="relative aspect-[0.74] overflow-hidden rounded-[0.8rem] max-md:rounded-[0.7rem]">
                 <Image
-                  src="/instagram/process-board-3.jpeg"
+                  src="/instagram/process-board-3.avif"
                   alt="Trouser detail study board with construction notes."
                   fill
                   sizes="(max-width: 1120px) 28vw, 15vw"
@@ -96,7 +96,7 @@ export function ProcessSection() {
             <div className="absolute right-[4.5%] top-[39%] w-[46%] overflow-hidden rounded-[1.2rem] border border-white/55 bg-[#f7f1e6] p-2 shadow-[0_20px_36px_rgba(0,0,0,0.3)] max-md:border-white/35 max-md:p-1.5">
               <div className="relative aspect-[0.95] overflow-hidden rounded-[0.9rem] max-md:rounded-[0.72rem]">
                 <Image
-                  src="/instagram/process-board-4.jpeg"
+                  src="/instagram/process-board-4.avif"
                   alt="Close-up of stitching and garment construction in progress."
                   fill
                   sizes="(max-width: 1120px) 34vw, 20vw"
@@ -109,7 +109,7 @@ export function ProcessSection() {
             <div className="absolute bottom-0 left-[33%] w-[44%] rotate-[-2deg] rounded-[1.15rem] bg-[#f8f0df] p-3 shadow-[0_18px_32px_rgba(0,0,0,0.28)] max-md:p-2">
               <div className="relative aspect-[0.92] overflow-hidden rounded-[0.8rem] max-md:rounded-[0.7rem]">
                 <Image
-                  src="/instagram/process-board-5.jpeg"
+                  src="/instagram/process-board-5.avif"
                   alt="Design review board with sketches, references, and fabric swatches."
                   fill
                   sizes="(max-width: 1120px) 32vw, 18vw"

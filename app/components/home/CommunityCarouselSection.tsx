@@ -9,17 +9,17 @@ import { RevealItem } from "./RevealItem";
 
 const communitySlides = [
   {
-    src: "/proof/community-proof.jpeg",
+    src: "/proof/community-proof.avif",
     alt: "Instagram story screenshot showing a customer sharing an Own Adaa product.",
     imageClassName: "object-cover object-top",
   },
   {
-    src: "/proof/community-proof.jpeg",
+    src: "/proof/community-proof.avif",
     alt: "Instagram story screenshot highlighting the central product packaging and message.",
     imageClassName: "object-cover object-center",
   },
   {
-    src: "/proof/community-proof.jpeg",
+    src: "/proof/community-proof.avif",
     alt: "Instagram story screenshot showing the lower handwritten note and product details.",
     imageClassName: "object-cover object-bottom",
   },
