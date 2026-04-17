@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 
+import { siteConfig } from "../../site-config";
 import { EditorialImage } from "./EditorialImage";
 
 export function HeroSection() {
@@ -181,6 +182,7 @@ export function HeroSection() {
               alt="Own Adaa white dress editorial portrait."
               fill
               sizes="220px"
+              unoptimized={siteConfig.media.unoptimizedImages}
               className="object-cover"
             />
           </div>

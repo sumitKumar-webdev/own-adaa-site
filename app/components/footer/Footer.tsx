@@ -18,6 +18,7 @@ export function Footer() {
               alt={siteConfig.brand.logoAlt}
               width={46}
               height={46}
+              unoptimized={siteConfig.media.unoptimizedImages}
               className="rounded-full"
             />
             <div className="grid">

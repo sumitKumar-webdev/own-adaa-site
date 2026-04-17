@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import { siteConfig } from "../../site-config";
+
 type EditorialImageProps = {
   src: string;
   alt: string;
@@ -62,6 +64,7 @@ export function EditorialImage({
         fill
         priority={priority}
         sizes={sizes}
+        unoptimized={siteConfig.media.unoptimizedImages}
         className={`object-cover ${hover.image} ${imageClassName}`}
       />
       <div

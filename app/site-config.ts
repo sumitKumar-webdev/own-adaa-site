@@ -13,6 +13,9 @@ export const siteConfig = {
     description:
       "Own Adaa is an Indian designer wear label shaping handcrafted silhouettes into an editorial digital boutique experience.",
   },
+  media: {
+    unoptimizedImages: true,
+  },
   navigation: [
     ["Story", "/#story"],
     ["Collection", "/#collection"],

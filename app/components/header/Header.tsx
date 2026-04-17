@@ -59,6 +59,7 @@ export function Header() {
             alt={siteConfig.brand.logoAlt}
             width={52}
             height={52}
+            unoptimized={siteConfig.media.unoptimizedImages}
             className={`h-[3rem] w-[3rem] rounded-full transform-gpu transition-[transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] max-sm:h-[2.65rem] max-sm:w-[2.65rem] ${
               isScrolled ? "scale-[0.94]" : "scale-100"
             }`}

@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
+import { siteConfig } from "../../site-config";
 import { RevealItem } from "./RevealItem";
 
 const communitySlides = [
@@ -176,6 +177,7 @@ export function CommunityCarouselSection() {
                       alt={slide.alt}
                       fill
                       sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                      unoptimized={siteConfig.media.unoptimizedImages}
                       className={`${slide.imageClassName} transition-transform duration-500 hover:scale-[1.03]`}
                       draggable={false}
                     />

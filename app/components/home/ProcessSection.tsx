@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { siteConfig } from "../../site-config";
 import { RevealItem } from "./RevealItem";
 
 const processNotes = [
@@ -60,6 +61,7 @@ export function ProcessSection() {
                   alt="Process board showing print planning and digital flat references."
                   fill
                   sizes="(max-width: 1120px) 42vw, 24vw"
+                  unoptimized={siteConfig.media.unoptimizedImages}
                   className="object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -72,6 +74,7 @@ export function ProcessSection() {
                   alt="Chitra design note board with fit and fabric annotations."
                   fill
                   sizes="(max-width: 1120px) 32vw, 18vw"
+                  unoptimized={siteConfig.media.unoptimizedImages}
                   className="object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -84,6 +87,7 @@ export function ProcessSection() {
                   alt="Trouser detail study board with construction notes."
                   fill
                   sizes="(max-width: 1120px) 28vw, 15vw"
+                  unoptimized={siteConfig.media.unoptimizedImages}
                   className="object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -96,6 +100,7 @@ export function ProcessSection() {
                   alt="Close-up of stitching and garment construction in progress."
                   fill
                   sizes="(max-width: 1120px) 34vw, 20vw"
+                  unoptimized={siteConfig.media.unoptimizedImages}
                   className="object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -108,6 +113,7 @@ export function ProcessSection() {
                   alt="Design review board with sketches, references, and fabric swatches."
                   fill
                   sizes="(max-width: 1120px) 32vw, 18vw"
+                  unoptimized={siteConfig.media.unoptimizedImages}
                   className="object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>

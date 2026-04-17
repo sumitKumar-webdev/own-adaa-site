@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { siteConfig } from "../../site-config";
 
 import { EditorialImage } from "./EditorialImage";
 import { RevealItem } from "./RevealItem";
@@ -143,6 +144,7 @@ export function SignatureSection() {
                           alt={detail.alt}
                           fill
                           sizes="176px"
+                          unoptimized={siteConfig.media.unoptimizedImages}
                           className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                         />
                       </div>
@@ -168,6 +170,7 @@ export function SignatureSection() {
                           alt={detail.alt}
                           fill
                           sizes="112px"
+                          unoptimized={siteConfig.media.unoptimizedImages}
                           className="object-cover"
                         />
                       </div>
