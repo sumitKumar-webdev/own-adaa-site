@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { ScrollNavLink } from "../ScrollNavLink";
 import { siteConfig } from "../../site-config";
 
 export function Header() {
@@ -49,8 +50,8 @@ export function Header() {
             : "scale-100 border-transparent border-b-black/8 bg-transparent shadow-none max-md:rounded-[28px] max-md:border-black/8 max-md:bg-[rgba(255,252,245,0.92)] max-md:px-3 max-md:py-3 max-md:shadow-[0_16px_34px_rgba(17,17,17,0.06)]"
         }`}
       >
-        <Link
-          href="/#top"
+        <ScrollNavLink
+          targetId="top"
           aria-label={siteConfig.brand.homeLabel}
           className="inline-flex min-w-0 items-center gap-2.5 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] max-sm:gap-2"
         >
@@ -79,20 +80,30 @@ export function Header() {
               {siteConfig.brand.tagline}
             </span>
           </div>
-        </Link>
+        </ScrollNavLink>
 
         <nav
           aria-label="Primary"
           className="hidden justify-center gap-[clamp(1rem,2vw,2rem)] text-[0.78rem] font-semibold uppercase tracking-[0.18em] md:flex"
         >
-          {navigationItems.map(([label, href]) => (
-            <Link
-              key={label}
-              href={href}
-              className="relative text-[var(--ink-soft)] transition duration-200 hover:text-[var(--ink)] after:absolute after:-bottom-[0.45rem] after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-[var(--accent)] after:transition-transform after:duration-200 hover:after:scale-x-100"
-            >
-              {label}
-            </Link>
+          {navigationItems.map((item) => (
+            item.type === "section" ? (
+              <ScrollNavLink
+                key={item.label}
+                targetId={item.targetId}
+                className="relative text-[var(--ink-soft)] transition duration-200 hover:text-[var(--ink)] after:absolute after:-bottom-[0.45rem] after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-[var(--accent)] after:transition-transform after:duration-200 hover:after:scale-x-100"
+              >
+                {item.label}
+              </ScrollNavLink>
+            ) : (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="relative text-[var(--ink-soft)] transition duration-200 hover:text-[var(--ink)] after:absolute after:-bottom-[0.45rem] after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-[var(--accent)] after:transition-transform after:duration-200 hover:after:scale-x-100"
+              >
+                {item.label}
+              </Link>
+            )
           ))}
         </nav>
 
@@ -110,14 +121,14 @@ export function Header() {
           )}
         </button>
 
-        <Link
-          href={siteConfig.cta.href}
+        <ScrollNavLink
+          targetId={siteConfig.cta.targetId}
           className={`hidden lg:inline-flex ${viewCollectionClassName} ${
             isScrolled ? "min-h-[2.55rem] px-4" : "min-h-[2.8rem] px-5"
           }`}
         >
           <span className="button-shimmer__label">{siteConfig.cta.label}</span>
-        </Link>
+        </ScrollNavLink>
 
         <div
           className={`col-span-2 overflow-hidden transition-[max-height,opacity,padding,margin] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden ${
@@ -127,15 +138,26 @@ export function Header() {
           }`}
         >
           <nav aria-label="Mobile primary" className="grid gap-2">
-            {navigationItems.map(([label, href]) => (
-              <Link
-                key={label}
-                href={href}
-                onClick={() => setIsMenuOpen(false)}
-                className="flex min-h-[2.85rem] items-center justify-center rounded-full border border-black/8 bg-white/55 px-4 text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-[var(--ink)] transition-[transform,border-color,color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:border-[var(--accent)]/30 hover:text-[var(--accent-deep)]"
-              >
-                {label}
-              </Link>
+            {navigationItems.map((item) => (
+              item.type === "section" ? (
+                <ScrollNavLink
+                  key={item.label}
+                  targetId={item.targetId}
+                  onNavigate={() => setIsMenuOpen(false)}
+                  className="flex min-h-[2.85rem] items-center justify-center rounded-full border border-black/8 bg-white/55 px-4 text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-[var(--ink)] transition-[transform,border-color,color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:border-[var(--accent)]/30 hover:text-[var(--accent-deep)]"
+                >
+                  {item.label}
+                </ScrollNavLink>
+              ) : (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="flex min-h-[2.85rem] items-center justify-center rounded-full border border-black/8 bg-white/55 px-4 text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-[var(--ink)] transition-[transform,border-color,color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:border-[var(--accent)]/30 hover:text-[var(--accent-deep)]"
+                >
+                  {item.label}
+                </Link>
+              )
             ))}
           </nav>
         </div>

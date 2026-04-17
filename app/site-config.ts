@@ -17,14 +17,15 @@ export const siteConfig = {
     unoptimizedImages: true,
   },
   navigation: [
-    ["Story", "/#story"],
-    ["Collection", "/#collection"],
-    ["Atelier", "/#atelier"],
-    ["Shop", "/coming-soon"],
+    { label: "Story", type: "section", targetId: "story" },
+    { label: "Collection", type: "section", targetId: "collection" },
+    { label: "Atelier", type: "section", targetId: "atelier" },
+    { label: "Shop", type: "route", href: "/coming-soon" },
   ] as const,
   cta: {
     label: "View Collection",
-    href: "/#collection",
+    type: "section",
+    targetId: "collection",
   },
   social: {
     instagram: {

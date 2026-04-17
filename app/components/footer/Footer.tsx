@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { siteConfig } from "../../site-config";
+import { ScrollNavLink } from "../ScrollNavLink";
 import { RevealItem } from "../home/RevealItem";
 import { InstagramIcon, WhatsAppIcon } from "../home/SocialIcons";
 
@@ -12,7 +13,7 @@ export function Footer() {
     <footer className="mx-auto mt-14 border-t border-black/10 pt-8">
       <div className="grid gap-8 rounded-[30px] bg-[linear-gradient(180deg,rgba(255,252,245,0.82),rgba(245,237,221,0.62))] px-5 py-6 shadow-[0_18px_40px_rgba(17,17,17,0.04)] md:grid-cols-[minmax(0,1fr)_auto] md:px-7">
         <RevealItem delay={0.06} x={-24} y={12} className="max-w-[28rem]">
-          <Link href="/#top" className="inline-flex items-center gap-3">
+          <ScrollNavLink targetId="top" className="inline-flex items-center gap-3">
             <Image
               src="/brand-mark.avif"
               alt={siteConfig.brand.logoAlt}
@@ -29,7 +30,7 @@ export function Footer() {
                 {siteConfig.brand.tagline}
               </span>
             </div>
-          </Link>
+          </ScrollNavLink>
 
           <p className="mt-4 max-w-[24rem] text-[0.96rem] leading-[1.8] text-[var(--ink-soft)]">
             {siteConfig.brand.description}
@@ -46,21 +47,32 @@ export function Footer() {
             aria-label="Footer"
             className="flex flex-wrap gap-x-5 gap-y-3 text-[0.74rem] font-semibold uppercase tracking-[0.18em]"
           >
-            {footerLinks.map(([label, href]) => (
-              <Link
-                key={label}
-                href={href}
-                className="text-[var(--ink-soft)] transition duration-200 hover:text-[var(--accent-deep)]"
-              >
-                {label}
-              </Link>
+            {footerLinks.map((item) => (
+              item.type === "section" ? (
+                <ScrollNavLink
+                  key={item.label}
+                  targetId={item.targetId}
+                  className="text-[var(--ink-soft)] transition duration-200 hover:text-[var(--accent-deep)]"
+                >
+                  {item.label}
+                </ScrollNavLink>
+              ) : (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="text-[var(--ink-soft)] transition duration-200 hover:text-[var(--accent-deep)]"
+                >
+                  {item.label}
+                </Link>
+              )
             ))}
           </nav>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap flex-col gap-3">
             <p className="w-full text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[var(--ink-soft)] md:text-right">
               {siteConfig.footer.orderLine}
             </p>
+            <div className="flex flex-wrap gap-5 justify-end items-center">
             <a
               href={siteConfig.social.instagram.href}
               target="_blank"
@@ -83,6 +95,7 @@ export function Footer() {
                 {siteConfig.social.whatsapp.label}
               </span>
             </a>
+            </div>
           </div>
         </RevealItem>
       </div>
@@ -93,7 +106,7 @@ export function Footer() {
         className="flex flex-col gap-2 px-1 pb-3 pt-4 text-[0.72rem] uppercase tracking-[0.16em] text-[var(--ink-soft)] md:flex-row md:items-center md:justify-between"
       >
         <span>{siteConfig.brand.copyright}</span>
-        <span>{siteConfig.footer.closingLine}</span>
+        {/* <span>{siteConfig.footer.closingLine}</span> */}
       </RevealItem>
     </footer>
   );

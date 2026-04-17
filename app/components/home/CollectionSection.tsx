@@ -1,4 +1,6 @@
 import { collectionStories } from "./content";
+import { ScrollNavLink } from "../ScrollNavLink";
+import TapedTextNote from "../Text Note/taped-text-note";
 import { EditorialImage } from "./EditorialImage";
 import { RevealItem } from "./RevealItem";
 
@@ -44,8 +46,8 @@ function ChapterCard({ index }: ChapterCardProps) {
     <article
       className={`group h-full overflow-hidden rounded-[28px] border border-black/8 p-3 shadow-[0_18px_36px_rgba(17,17,17,0.06)] max-sm:rounded-[22px] ${theme.cardClass}`}
     >
-      <a
-        href="#top"
+      <ScrollNavLink
+        targetId="top"
         aria-label={story.title}
         className="grid h-full grid-rows-[auto_auto_1fr_auto] gap-3"
       >
@@ -79,7 +81,7 @@ function ChapterCard({ index }: ChapterCardProps) {
             {story.description}
           </p>
         </div>
-      </a>
+      </ScrollNavLink>
     </article>
   );
 }
@@ -87,14 +89,28 @@ function ChapterCard({ index }: ChapterCardProps) {
 export function CollectionSection() {
   return (
     <section id="collection" className="mx-auto max-w-[1320px] pt-10">
-      <div className="mb-8 grid grid-cols-[minmax(0,1fr)_minmax(18rem,24rem)] items-end gap-6 max-[1120px]:grid-cols-1">
-        <RevealItem delay={0.06} y={18} className="max-w-[48rem]">
+      <div className="relative mb-8 grid grid-cols-[minmax(0,1fr)_minmax(18rem,24rem)] items-end gap-6 max-[1120px]:grid-cols-1">
+        <RevealItem delay={0.06} y={18} className="relative max-w-[48rem]">
           <p className="text-[0.74rem] font-bold uppercase tracking-[0.22em] text-[var(--accent-deep)]">
             Collection Chapters
           </p>
           <h2 className="[font-family:var(--font-editorial)] text-[clamp(2.7rem,5vw,4.8rem)] font-semibold leading-[0.96] tracking-[-0.04em] text-[var(--ink)]">
             Three distinct looks, each presented as its own chapter.
           </h2>
+        </RevealItem>
+
+        <RevealItem
+          delay={0.14}
+          x={22}
+          y={10}
+          className="pointer-events-none absolute right-[2rem] top-[0.8rem] z-10 h-0 w-0 max-[1120px]:right-0 max-[1120px]:top-auto max-[1120px]:translate-y-0 max-[1120px]:bottom-[-1rem]"
+        >
+          <TapedTextNote
+            title="Collection Note"
+            desc="One collection, shown through three moods so each look reads with its own identity."
+            className="-right-5 top-0 w-[15.5rem] -rotate-[3.5deg] max-[1120px]:right-4 rounded!"
+            tapeClassName="rotate-[1.5deg]"
+          />
         </RevealItem>
       </div>
 

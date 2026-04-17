@@ -4,6 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 
 import { siteConfig } from "../../site-config";
+import { ScrollNavLink } from "../ScrollNavLink";
 import { EditorialImage } from "./EditorialImage";
 
 export function HeroSection() {
@@ -123,19 +124,19 @@ export function HeroSection() {
           className="mt-9 flex flex-wrap gap-3 max-sm:grid max-sm:grid-cols-1"
           {...fadeUp(0.4)}
         >
-          <a
-            href="#collection"
+          <ScrollNavLink
+            targetId="collection"
             className="button-shimmer button-shimmer--accent inline-flex min-h-[3.35rem] items-center justify-center rounded-full bg-[linear-gradient(135deg,#9a063b_0%,#bf0d4d_55%,#d53870_100%)] px-7 text-center text-[0.76rem] font-bold uppercase tracking-[0.18em] text-[#fffaf4] shadow-[0_16px_40px_rgba(191,13,77,0.22)] transition-[transform,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-[2px] hover:shadow-[0_22px_48px_rgba(191,13,77,0.28)] max-sm:w-full"
           >
             <span className="button-shimmer__label">Explore Collection</span>
-          </a>
+          </ScrollNavLink>
 
-          <a
-            href="#journal"
+          <ScrollNavLink
+            targetId="atelier"
             className="button-shimmer button-shimmer--soft inline-flex min-h-[3.35rem] items-center justify-center rounded-full border border-black/12 bg-[rgba(255,252,245,0.74)] px-7 text-center text-[0.76rem] font-bold uppercase tracking-[0.18em] text-[var(--ink)] shadow-[0_12px_26px_rgba(17,17,17,0.05)] transition-[transform,border-color,background-color,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-[2px] hover:border-black/20 hover:bg-white/90 hover:shadow-[0_18px_34px_rgba(17,17,17,0.08)] max-sm:w-full"
           >
             <span className="button-shimmer__label">View Lookbook</span>
-          </a>
+          </ScrollNavLink>
         </motion.div>
       </div>
 
