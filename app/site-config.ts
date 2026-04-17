@@ -28,15 +28,16 @@ export const siteConfig = {
   },
   social: {
     instagram: {
-      label: "Instagram",
-      href: "https://www.instagram.com/ownadaa.in/",
+      label: "DM to Order",
+      href: "https://instagram.com/m/ownadaa.in",
     },
     whatsapp: {
-      label: "WhatsApp",
-      href: "https://wa.me/?text=Hi%20Own%20Adaa%2C%20I%20want%20to%20explore%20the%20collection.",
+      label: "Order on WhatsApp",
+      href: "https://api.whatsapp.com/send/?phone=919217728660&text=Hi+I+want+to+place+an+order&type=phone_number&app_absent=0",
     },
   },
   footer: {
+    orderLine: "Place your order on WhatsApp or send us a DM on Instagram.",
     closingLine: "Designed with a sharper editorial finish.",
   },
 } as const;

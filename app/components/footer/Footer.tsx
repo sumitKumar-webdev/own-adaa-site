@@ -58,6 +58,9 @@ export function Footer() {
           </nav>
 
           <div className="flex flex-wrap gap-3">
+            <p className="w-full text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[var(--ink-soft)] md:text-right">
+              {siteConfig.footer.orderLine}
+            </p>
             <a
               href={siteConfig.social.instagram.href}
               target="_blank"
