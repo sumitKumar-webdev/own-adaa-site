@@ -65,7 +65,7 @@ export function Footer() {
               className="button-shimmer button-shimmer--accent inline-flex items-center justify-center rounded-full bg-[linear-gradient(135deg,#9a063b_0%,#bf0d4d_55%,#d53870_100%)] px-4 text-[0.72rem] font-bold uppercase tracking-[0.16em] text-[#fffaf4] shadow-[0_14px_28px_rgba(191,13,77,0.16)] transition duration-200 hover:-translate-y-px"
             >
               <span className="button-shimmer__label inline-flex items-center gap-2">
-                <InstagramIcon className="h-[1.12rem] w-[1.12rem]" />
+                <InstagramIcon className="py-2 w-[1.12rem]" />
                 {siteConfig.social.instagram.label}
               </span>
             </a>
@@ -76,7 +76,7 @@ export function Footer() {
               className="button-shimmer button-shimmer--soft inline-flex items-center justify-center rounded-full border border-black/10 bg-white/70 px-4 text-[0.72rem] font-bold uppercase tracking-[0.16em] text-[var(--ink)] transition duration-200 hover:-translate-y-px hover:border-[var(--accent)]/30"
             >
               <span className="button-shimmer__label inline-flex items-center gap-2">
-                <WhatsAppIcon className="h-[1.12rem] w-[1.12rem]" />
+                <WhatsAppIcon className="py-2 w-[1.12rem]" />
                 {siteConfig.social.whatsapp.label}
               </span>
             </a>
