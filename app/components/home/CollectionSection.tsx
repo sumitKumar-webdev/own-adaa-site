@@ -98,30 +98,46 @@ export function CollectionSection() {
             Three distinct looks, each presented as its own chapter.
           </h2>
         </RevealItem>
-
         <RevealItem
           delay={0.14}
           x={22}
           y={10}
-          className="pointer-events-none hidden md:absolute right-[2rem] top-[0.8rem] z-10 h-0 w-0 max-[1120px]:right-0 max-[1120px]:top-auto max-[1120px]:translate-y-0 max-[1120px]:bottom-[-1rem]"
+          className="
+    pointer-events-none
+    hidden md:block
+    md:absolute md:right-[2rem] lg:top-[0.8rem]
+    z-10 h-0 w-0
+  "
         >
           <TapedTextNote
             title="Collection Note"
             desc="One collection, shown through three moods so each look reads with its own identity."
-            className="-right-5 top-0 w-[15.5rem] -rotate-[3.5deg] max-[1120px]:right-4 rounded!"
+            className="-right-5 top-0 w-[15.5rem] -rotate-[3.5deg]"
             tapeClassName="rotate-[1.5deg]"
           />
         </RevealItem>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 lg:items-stretch">
-        <RevealItem delay={0.16} x={-28} y={14} scaleFrom={0.985} className="h-full">
+        <RevealItem
+          delay={0.16}
+          x={-28}
+          y={14}
+          scaleFrom={0.985}
+          className="h-full"
+        >
           <ChapterCard index={0} />
         </RevealItem>
         <RevealItem delay={0.22} y={20} scaleFrom={0.985} className="h-full">
           <ChapterCard index={1} />
         </RevealItem>
-        <RevealItem delay={0.28} x={28} y={14} scaleFrom={0.985} className="h-full">
+        <RevealItem
+          delay={0.28}
+          x={28}
+          y={14}
+          scaleFrom={0.985}
+          className="h-full"
+        >
           <ChapterCard index={2} />
         </RevealItem>
       </div>
