@@ -103,7 +103,7 @@ export function CollectionSection() {
           delay={0.14}
           x={22}
           y={10}
-          className="pointer-events-none absolute right-[2rem] top-[0.8rem] z-10 h-0 w-0 max-[1120px]:right-0 max-[1120px]:top-auto max-[1120px]:translate-y-0 max-[1120px]:bottom-[-1rem]"
+          className="pointer-events-none hidden md:absolute right-[2rem] top-[0.8rem] z-10 h-0 w-0 max-[1120px]:right-0 max-[1120px]:top-auto max-[1120px]:translate-y-0 max-[1120px]:bottom-[-1rem]"
         >
           <TapedTextNote
             title="Collection Note"
